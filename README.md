@@ -1,4 +1,4 @@
-# Orhun's corner
+# Auron's corner
 
 A static, draggable scrapbook portfolio for AuronSavant. Open `index.html`, or serve this directory with any static HTTP server. No build or installation is required.
 
