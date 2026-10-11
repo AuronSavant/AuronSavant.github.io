@@ -1,0 +1,202 @@
+[
+  {
+    "name": "FoodDB Kitchen",
+    "description": "Ingredients, meals, and a visual way to explore what to cook.",
+    "kind": "food",
+    "group": "live",
+    "url": "https://fooddb-kitchen.pages.dev",
+    "screenshot": "assets/screenshots/fooddb.jpg"
+  },
+  {
+    "name": "SeriesRatings",
+    "description": "Explore episode ratings and the shape of a series.",
+    "kind": "chart",
+    "group": "live",
+    "url": "https://seriesratings.pages.dev",
+    "screenshot": "assets/screenshots/seriesratings.jpg"
+  },
+  {
+    "name": "Steam Atlas",
+    "description": "Game rankings, genres, and discoveries from Steam data.",
+    "kind": "game",
+    "group": "live",
+    "url": "https://steam-atlas-explorer.pages.dev",
+    "screenshot": "assets/screenshots/steam-atlas.jpg"
+  },
+  {
+    "name": "Itch Atlas",
+    "description": "An explorer for indie games and itch.io rankings.",
+    "kind": "game",
+    "group": "live",
+    "url": "https://itch-atlas.pages.dev",
+    "screenshot": "assets/screenshots/itch-atlas.jpg"
+  },
+  {
+    "name": "Songbook",
+    "description": "A place for songs, artists, ratings, and discoveries.",
+    "kind": "music",
+    "group": "live",
+    "url": "https://songbook-aurons.pages.dev",
+    "screenshot": "assets/screenshots/songbook.jpg"
+  },
+  {
+    "name": "Offbeat",
+    "description": "A music companion with YouTube connections.",
+    "kind": "music",
+    "group": "live",
+    "url": "https://offbeat-aurons.pages.dev",
+    "screenshot": "assets/screenshots/offbeat.jpg"
+  },
+  {
+    "name": "PaperAid",
+    "description": "Read research papers and unpack their methods and results.",
+    "kind": "paper",
+    "group": "lab",
+    "url": "https://github.com/AuronSavant",
+    "screenshot": ""
+  },
+  {
+    "name": "PaperTracker",
+    "description": "Research discovery, discipline browsing, and a paper watchlist.",
+    "kind": "paper",
+    "group": "lab",
+    "url": "https://github.com/AuronSavant",
+    "screenshot": ""
+  },
+  {
+    "name": "ConceptMap",
+    "description": "A garden for concepts and the connections between them.",
+    "kind": "map",
+    "group": "lab",
+    "url": "https://github.com/AuronSavant",
+    "screenshot": "assets/screenshots/conceptmap.jpg"
+  },
+  {
+    "name": "MarketComparer",
+    "description": "Compare shopping prices and build a cheaper basket.",
+    "kind": "chart",
+    "group": "lab",
+    "url": "https://github.com/AuronSavant",
+    "screenshot": ""
+  },
+  {
+    "name": "Healthcare Transparency",
+    "description": "Explore and compare hospital pricing data.",
+    "kind": "chart",
+    "group": "lab",
+    "url": "https://github.com/AuronSavant",
+    "screenshot": "assets/screenshots/healthcare.jpg"
+  },
+  {
+    "name": "OECDMasterPass",
+    "description": "Explore economic data, regression, and places.",
+    "kind": "chart",
+    "group": "lab",
+    "url": "https://github.com/AuronSavant",
+    "screenshot": "assets/screenshots/oecd.jpg"
+  },
+  {
+    "name": "Maps",
+    "description": "Maps, geography, and visual explorations.",
+    "kind": "map",
+    "group": "lab",
+    "url": "https://github.com/AuronSavant",
+    "screenshot": ""
+  },
+  {
+    "name": "Maps Atlas",
+    "description": "Another thread in the mapping workshop.",
+    "kind": "map",
+    "group": "lab",
+    "url": "https://github.com/AuronSavant",
+    "screenshot": ""
+  },
+  {
+    "name": "Europa Homes",
+    "description": "A European property explorer with maps and saved prices.",
+    "kind": "map",
+    "group": "lab",
+    "url": "https://github.com/AuronSavant",
+    "screenshot": ""
+  },
+  {
+    "name": "NutriOptimize",
+    "description": "A nutrition project in the workshop.",
+    "kind": "food",
+    "group": "lab",
+    "url": "https://github.com/AuronSavant",
+    "screenshot": ""
+  },
+  {
+    "name": "Pixiv Analyzer",
+    "description": "Artwork tags, popularity trends, and monthly counts.",
+    "kind": "chart",
+    "group": "lab",
+    "url": "https://github.com/AuronSavant",
+    "screenshot": "assets/screenshots/pixiv.png"
+  },
+  {
+    "name": "WikiLens",
+    "description": "Explore Wikipedia across languages, people, and lineages.",
+    "kind": "paper",
+    "group": "lab",
+    "url": "https://github.com/AuronSavant",
+    "screenshot": ""
+  },
+  {
+    "name": "MAL Lens",
+    "description": "Explore unusual MyAnimeList rankings.",
+    "kind": "chart",
+    "group": "side",
+    "url": "https://github.com/AuronSavant",
+    "screenshot": ""
+  },
+  {
+    "name": "Manga Workbench",
+    "description": "Japanese manga translation, lettering, and editable pages.",
+    "kind": "paper",
+    "group": "side",
+    "url": "https://github.com/AuronSavant",
+    "screenshot": ""
+  },
+  {
+    "name": "Yohaku",
+    "description": "A Japanese word adventure where words become actions.",
+    "kind": "japan",
+    "group": "side",
+    "url": "https://github.com/AuronSavant",
+    "screenshot": "assets/screenshots/yohaku.png"
+  },
+  {
+    "name": "BookRank / SteamGames",
+    "description": "A separate catalog and ranking experiment.",
+    "kind": "paper",
+    "group": "side",
+    "url": "https://github.com/AuronSavant",
+    "screenshot": "assets/screenshots/bookrank.jpg"
+  },
+  {
+    "name": "EpubMerge",
+    "description": "Merge EPUB books with a table of contents for each one.",
+    "kind": "paper",
+    "group": "extra",
+    "url": "https://github.com/AuronSavant/EpubMerge",
+    "screenshot": ""
+  },
+  {
+    "name": "KanjiUlt",
+    "description": "Kanji by frequency, connected to compound words.",
+    "kind": "japan",
+    "group": "extra",
+    "url": "https://github.com/AuronSavant/KanjiUlt",
+    "screenshot": ""
+  },
+  {
+    "name": "Songfinder",
+    "description": "A song-finding project in the workshop.",
+    "kind": "music",
+    "group": "extra",
+    "url": "https://github.com/AuronSavant",
+    "screenshot": ""
+  }
+]
