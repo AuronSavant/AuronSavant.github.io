@@ -72,14 +72,6 @@
     "screenshot": "assets/screenshots/conceptmap.jpg"
   },
   {
-    "name": "MarketComparer",
-    "description": "Compare shopping prices and build a cheaper basket.",
-    "kind": "chart",
-    "group": "lab",
-    "url": "https://github.com/AuronSavant",
-    "screenshot": ""
-  },
-  {
     "name": "Healthcare Transparency",
     "description": "Explore and compare hospital pricing data.",
     "kind": "chart",
