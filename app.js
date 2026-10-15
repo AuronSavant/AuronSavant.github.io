@@ -1,8 +1,10 @@
 (async function(){
 const github='https://github.com/AuronSavant';
-const response=await fetch('projects.json');
-if(!response.ok)throw new Error('Could not load projects.json');
-const projects=(await response.json()).map((p,i)=>({...p,i,live:p.group==='live'}));
+const [response,excludedResponse]=await Promise.all([fetch('projects.json',{cache:'no-store'}),fetch('excluded-projects.json',{cache:'no-store'})]);
+if(!response.ok||!excludedResponse.ok)throw new Error('Could not load project content');
+const normalizeName=name=>name.toLowerCase().replace(/[^a-z0-9]/g,'');
+const excludedNames=new Set((await excludedResponse.json()).map(normalizeName));
+const projects=(await response.json()).filter(p=>!excludedNames.has(normalizeName(p.name))).map((p,i)=>({...p,i,live:p.group==='live'}));
 const escapeText=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function card(p,x,y,compact=false){
  const a=document.createElement('a');

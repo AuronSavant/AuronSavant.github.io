@@ -12,7 +12,9 @@ Open https://auronsavant.github.io/editor.html. Edit the project names and descr
 
 Alternatively, edit `projects.json` directly on GitHub or locally. Each project is a named object with `name`, `description`, `group`, `url`, and `screenshot`. Keep the same group to preserve its section. To add a screenshot, place the image in `assets/screenshots/` and set its path in the project object. A blank screenshot shows a text card. The project index uses the same content, so wording only needs to be changed once.
 
-Published Cloudflare projects link directly to their apps. Private projects link to the GitHub profile. Excluded: YouTube3Blue1BrownishVideo, PolyScores, AIBusiness, GermanyGraduatePrograms, GitHub Committer, PatternFinder, Nazeka Chrome, Arcane Expanded, GeoEcon Regression, Imgur Resizer, and API SaaS Maker. Generic GitHub training repositories are omitted.
+Published Cloudflare projects link directly to their apps. Private projects link to the GitHub profile. `excluded-projects.json` preserves the requested exclusions and their alternate names; excluded names are also filtered out when the scrapbook loads. Excluded: YouTube3Blue1BrownishVideo, PolyScores, AIBusiness, GermanyGraduatePrograms, GitHub Committer, PatternFinder, Nazeka Chrome, Arcane Expanded, GeoEcon Regression, Imgur Resizer, API SaaS Maker, and MarketComparer (including the US edition). Generic GitHub training repositories are omitted.
+
+The October 15 project audit covers the project folders, the local app registry, GitHub repositories, and all six Cloudflare Pages projects. VNify (FanficVNifier) and MasterTrack were added with screenshots. Existing aliases already cover FoodDB, Itchdb, SteamDB, Songs/Songbook/Offbeat, MAL API/MAL Lens, MangaTranslator/Manga Workbench, VN_Combination/Europa Homes, WordGameJapan/Yohaku, Wiki/WikiLens, SteamGames/BookRank, and NutriOptimize/NutriSolve. The local launcher is supporting infrastructure, and this portfolio is already the current page.
 
 ## GitHub Pages
 

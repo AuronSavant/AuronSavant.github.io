@@ -184,6 +184,22 @@
     "screenshot": ""
   },
   {
+    "name": "MasterTrack",
+    "description": "Track anime, manga, films, TV, and games in one library.",
+    "kind": "chart",
+    "group": "lab",
+    "url": "https://github.com/AuronSavant",
+    "screenshot": "assets/screenshots/mastertrack.jpg"
+  },
+  {
+    "name": "VNify",
+    "description": "Read stories as visual novels, with character sprites, music, and Japanese reading tools.",
+    "kind": "japan",
+    "group": "side",
+    "url": "https://github.com/AuronSavant",
+    "screenshot": "assets/screenshots/vnify.jpg"
+  },
+  {
     "name": "Songfinder",
     "description": "A song-finding project in the workshop.",
     "kind": "music",
