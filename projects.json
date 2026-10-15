@@ -200,6 +200,14 @@
     "screenshot": "assets/screenshots/vnify.jpg"
   },
   {
+    "name": "Local Apps Launcher",
+    "description": "Open the local apps from one place.",
+    "kind": "code",
+    "group": "extra",
+    "url": "https://github.com/AuronSavant",
+    "screenshot": ""
+  },
+  {
     "name": "Songfinder",
     "description": "A song-finding project in the workshop.",
     "kind": "music",

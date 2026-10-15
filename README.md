@@ -14,7 +14,7 @@ Alternatively, edit `projects.json` directly on GitHub or locally. Each project 
 
 Published Cloudflare projects link directly to their apps. Private projects link to the GitHub profile. `excluded-projects.json` preserves the requested exclusions and their alternate names; excluded names are also filtered out when the scrapbook loads. Excluded: YouTube3Blue1BrownishVideo, PolyScores, AIBusiness, GermanyGraduatePrograms, GitHub Committer, PatternFinder, Nazeka Chrome, Arcane Expanded, GeoEcon Regression, Imgur Resizer, API SaaS Maker, and MarketComparer (including the US edition). Generic GitHub training repositories are omitted.
 
-The October 15 project audit covers the project folders, the local app registry, GitHub repositories, and all six Cloudflare Pages projects. VNify (FanficVNifier) and MasterTrack were added with screenshots. Existing aliases already cover FoodDB, Itchdb, SteamDB, Songs/Songbook/Offbeat, MAL API/MAL Lens, MangaTranslator/Manga Workbench, VN_Combination/Europa Homes, WordGameJapan/Yohaku, Wiki/WikiLens, SteamGames/BookRank, and NutriOptimize/NutriSolve. The local launcher is supporting infrastructure, and this portfolio is already the current page.
+The October 15 project audit covers the project folders, the local app registry, GitHub repositories, and all six Cloudflare Pages projects. VNify (FanficVNifier) and MasterTrack were added with screenshots, along with the shared Local Apps Launcher. Existing aliases already cover FoodDB, Itchdb, SteamDB, Songs/Songbook/Offbeat, MAL API/MAL Lens, MangaTranslator/Manga Workbench, VN_Combination/Europa Homes, WordGameJapan/Yohaku, Wiki/WikiLens, SteamGames/BookRank, and NutriOptimize/NutriSolve. This portfolio is already the current page.
 
 ## GitHub Pages
 
