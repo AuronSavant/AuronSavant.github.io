@@ -1,0 +1,56 @@
+/* Visual layers stay behind the scrapbook's links and controls. */
+body{--glow:#ce985f;--fx-line:#b97650;--surface:#fff9ec;--glass:#fff7e9dc}
+#viewport{background-color:#eee3cc;transition:background-color .6s}
+#viewport:before{content:'';position:fixed;inset:0;pointer-events:none;background:radial-gradient(ellipse at 20% 15%,#fff6d44a,transparent 50%),radial-gradient(ellipse at 90% 90%,#c8734922,transparent 50%);box-shadow:inset 0 0 150px #70502b12}
+.paper,.polaroid{isolation:isolate}
+.project{transform:perspective(900px) rotate(var(--tilt)) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateY(var(--lift,0px));transition:transform .22s,box-shadow .22s,filter .22s}
+.project:hover{--lift:-7px;z-index:2;box-shadow:6px 18px 25px #513c302b,0 0 0 1px #b28b5466}
+.project:after,.polaroid:after{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at var(--mx,50%) var(--my,20%),#fff9dc44,transparent 60%);opacity:0;transition:opacity .3s;border-radius:inherit}
+.project:hover:after,.polaroid:hover:after{opacity:1}
+.project-art img{transition:transform .8s cubic-bezier(.2,.6,.2,1)}
+.project:hover .project-art img{transform:scale(1.045)}
+.polaroid{cursor:zoom-in;transition:box-shadow .3s,filter .3s}
+.polaroid:hover{box-shadow:7px 16px 28px #513c3044;filter:brightness(1.04)}
+.brand span{display:inline-block;transition:transform .9s}.brand:hover span{transform:rotate(180deg)}
+.live .status:before{box-shadow:0 0 0 3px #6e876419;animation:heartbeat 4s ease-in-out infinite}
+@keyframes heartbeat{50%{box-shadow:0 0 0 5px #6e876400}}
+.decoration{position:absolute;z-index:-1;pointer-events:none;user-select:none;color:var(--fx-line);opacity:.65}
+.decoration svg{width:100%;height:100%;overflow:visible}
+.decoration.orbit{left:1020px;top:705px;width:520px;height:580px;opacity:.2;animation:orbit-turn 150s linear infinite}
+@keyframes orbit-turn{to{transform:rotate(360deg)}}
+.decoration.crane{left:1500px;top:600px;width:155px;height:110px;transform:rotate(-14deg);filter:drop-shadow(4px 8px 4px #513c3022)}
+.decoration.botanical{left:980px;top:1480px;width:140px;height:240px;transform:rotate(23deg);color:#738565}
+.decoration.moon{left:1770px;top:960px;width:100px;height:120px;transform:rotate(12deg)}
+.decoration.compass{left:1540px;top:1940px;width:190px;height:190px;opacity:.35}
+.decoration.constellation{left:930px;top:180px;width:480px;height:370px;opacity:.4}
+.decoration.film{left:1070px;top:1330px;width:420px;height:110px;transform:rotate(-7deg);opacity:.88;filter:drop-shadow(3px 5px 3px #513c3033)}
+.decoration.stamp{left:1720px;top:1790px;width:130px;height:130px;transform:rotate(-19deg);opacity:.45}
+.decoration.washi{left:100px;top:1250px;width:550px;height:32px;transform:rotate(-4deg);opacity:.27;background:repeating-linear-gradient(45deg,#aa543d 0 12px,#ead3aa 12px 24px);clip-path:polygon(1% 0,100% 5%,99% 95%,0 100%)}
+#atmosphere{position:fixed;inset:0;z-index:2;pointer-events:none}
+.visual-controls{position:fixed;left:24px;bottom:25px;display:flex;gap:8px;z-index:3}
+.visual-controls button{display:grid;place-items:center;width:39px;height:39px;border:1px solid #c3a787;border-radius:50%;background:var(--surface);color:var(--ink);padding:10px;cursor:pointer;box-shadow:0 3px 8px #513c3010}
+.visual-controls svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.visual-controls button:hover{transform:translateY(-2px)}
+#atlas-map{position:fixed;bottom:79px;left:24px;width:146px;height:138px;z-index:3;background:var(--glass);border:1px solid #c3a78780;box-shadow:0 5px 18px #513c3014;border-radius:9px;padding:9px;cursor:crosshair;backdrop-filter:blur(8px)}
+#atlas-map svg{width:100%;height:100%;overflow:hidden}.map-card{fill:#bb9476;opacity:.55}.map-home{fill:#a74b3c;opacity:.8}.map-window{fill:#ad604b12;stroke:#a74b3c;stroke-width:22;rx:20;pointer-events:none}
+#photo-viewer{padding:14px;background:#fff9ec;border:0;overflow:visible;max-width:92vw;max-height:90vh;box-shadow:0 25px 100px #0006}
+#photo-viewer img{display:block;max-width:85vw;max-height:80vh;object-fit:contain}
+#photo-viewer button{position:absolute;right:-12px;top:-12px;width:34px;height:34px;border:1px solid #b99b75;background:#fff9ec;border-radius:50%;display:grid;place-items:center;color:#624d38;font-size:23px}
+#photo-viewer::backdrop{background:#2e241bc7;backdrop-filter:blur(12px)}
+body.night{--ink:#e4dccb;--red:#dc977c;--paper:#292b31;--surface:#303239;--glass:#262a32dc;--glow:#f1b575;--fx-line:#d3a784;color:var(--ink);background:#171c26}
+.night #viewport{background-color:#171c26;background-image:linear-gradient(#b5b5c309 1px,transparent 1px),radial-gradient(#d7bd9515 .8px,transparent .8px)}
+.night #viewport:before{background:radial-gradient(ellipse at 10% 0,#4c546633,transparent 60%),radial-gradient(ellipse at 90% 90%,#a4653520,transparent 55%);box-shadow:inset 0 0 150px #0004}
+.night header{background:linear-gradient(#191e29e8 55%,#191e2900)}
+.night .header-note,.night .section-label,.night .eyebrow{color:#c6aa91}.night .board-title em{color:#e9ac90}
+.night .paper{background:#292b31;box-shadow:2px 5px 16px #0004,0 0 0 1px #d7bda826}
+.night .polaroid{background:#d8cfbb}.night .project p,.night .coffee p{color:#bfb7ab}.night .handle{color:#bca58e;border-color:#746453}
+.night .project .card-footer{color:#c9a58b;border-color:#706151}.night .about-links a{color:#e0a18a}.night .sticky{background:#9b7549;color:#fff1ce}
+.night nav button{color:#e5dbc9}.night nav button:hover{background:#353642}.night .nav-coffee,.night .coffee a{background:#ba765e;color:#fff8eb}
+.night #help,.night .controls button{background:#292c33ed;color:#d8cbb7;border-color:#6f5e4c}.night .controls output{color:#c2b39e}
+.night #index{background:#252a32;color:#e5daca}.night #index input{background:#1d222b;color:#e5daca;border-color:#6f5e4c}.night .index-link p{color:#bfb7ab}.night .index-link{border-color:#706151}.night .dialog-head button{color:inherit}
+.night .threads{opacity:.6}.night .decoration{filter:drop-shadow(0 0 10px #e3a46c18)}
+.night .project:hover{box-shadow:0 10px 40px #0005,0 0 30px #c5844920,0 0 0 1px #dcb58d66}
+@media(max-width:1000px){.visual-controls{bottom:79px;left:auto;right:16px}#atlas-map{left:16px;bottom:79px;width:105px;height:100px}}
+@media(max-width:600px){.visual-controls{right:14px;top:78px;bottom:auto;flex-direction:column}.visual-controls button{width:34px;height:34px;padding:8px}#atlas-map{width:76px;height:72px;bottom:140px;left:12px;opacity:.75;padding:5px}.decoration.orbit{animation:none}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}#atmosphere{display:none}}
+body.effects-paused *,body.effects-paused *:before,body.effects-paused *:after{animation:none!important;transition:none!important}

@@ -21,8 +21,8 @@ projects.filter(p=>p.group==='extra').forEach((p,i)=>document.querySelector('#si
 document.querySelector('.polaroid.wide').style.left='1550px';document.querySelector('.polaroid.wide').style.top='1460px';
 document.querySelector('.sticky').style.left='785px';document.querySelector('.sticky').style.top='1245px';
 const viewport=document.querySelector('#viewport'),board=document.querySelector('#board');let x=0,y=0,scale=1;let moved=false,drag=null;const pointers=new Map();let pinch=null;
-function paint(){board.style.transform=`translate(${x}px,${y}px) scale(${scale})`;document.querySelector('#zoom-value').value=Math.round(scale*100)+'%';}
-function focus(cx,cy,s=scale){scale=Math.max(.18,Math.min(1.65,s));x=innerWidth/2-cx*scale;y=innerHeight/2-cy*scale;paint();}
+function paint(){board.style.transform=`translate(${x}px,${y}px) scale(${scale})`;document.querySelector('#zoom-value').value=Math.round(scale*100)+'%';document.dispatchEvent(new CustomEvent('portfolio:camera',{detail:{x,y,scale}}));}
+function focus(cx,cy,s=scale){const previous=getComputedStyle(board).transform;scale=Math.max(.18,Math.min(1.65,s));x=innerWidth/2-cx*scale;y=innerHeight/2-cy*scale;paint();if(board.dataset.ready&&!matchMedia('(prefers-reduced-motion: reduce)').matches&&!document.body.classList.contains('effects-paused')){board.getAnimations().forEach(a=>a.cancel());board.animate([{transform:previous},{transform:board.style.transform}],{duration:420,easing:'cubic-bezier(.22,.7,.25,1)'});}}
 function home(){focus(1290,1050,Math.min(innerWidth>1000?.76:.92,(innerWidth-35)/450,(innerHeight-145)/580));}
 function zoom(f,cx=innerWidth/2,cy=innerHeight/2){const next=Math.max(.18,Math.min(1.65,scale*f));x=cx-(cx-x)*next/scale;y=cy-(cy-y)*next/scale;scale=next;paint();}
 viewport.addEventListener('pointerdown',e=>{if(e.button!==0)return;pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});moved=false;if(pointers.size===1){drag={id:e.pointerId,startX:e.clientX,startY:e.clientY,x,y};}else if(pointers.size===2){const a=[...pointers.values()];pinch={distance:Math.hypot(a[0].x-a[1].x,a[0].y-a[1].y),cx:(a[0].x+a[1].x)/2,cy:(a[0].y+a[1].y)/2};moved=true;} });
@@ -41,6 +41,10 @@ document.querySelector('.brand').addEventListener('click',e=>{e.preventDefault()
 let keyboardNavigation=false;
 window.addEventListener('keydown',()=>{keyboardNavigation=true;});
 window.addEventListener('pointerdown',()=>{keyboardNavigation=false;},true);
-board.addEventListener('focusin',e=>{if(!keyboardNavigation)return;const a=e.target.closest('.project,.about,.coffee');if(a){focus(parseFloat(a.style.left)+a.offsetWidth/2,parseFloat(a.style.top)+a.offsetHeight/2,Math.max(scale,.65));}});
+board.addEventListener('focusin',e=>{if(!keyboardNavigation)return;const a=e.target.closest('.project,.about,.coffee,.polaroid');if(a){focus(parseFloat(a.style.left)+a.offsetWidth/2,parseFloat(a.style.top)+a.offsetHeight/2,Math.max(scale,.65));}});
+viewport.addEventListener('pointerdown',()=>board.getAnimations().forEach(a=>a.cancel()));
+viewport.addEventListener('wheel',()=>board.getAnimations().forEach(a=>a.cancel()));
+document.addEventListener('portfolio:navigate',e=>focus(e.detail.cx,e.detail.cy));
+board.dataset.ready='true';document.dispatchEvent(new Event('portfolio:ready'));paint();
 
 })().catch(error=>{console.error(error);document.querySelector('#help').textContent='Could not load projects. Please refresh the page.';});
